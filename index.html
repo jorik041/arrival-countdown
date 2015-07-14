@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Koľko času musí pretiecť, kým znova uvidím svoju lásku</title>
+	<script src="countdown.min.js"></script>
+	<style type="text/css">
+		body {
+			text-align: center;
+			font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+		}
+		span {
+			font-weight: bold;
+			font-size: 3em;
+		}
+	</style>
+</head>
+<body>
+	<h1>Koľko času musí pretiecť, kým znova uvidím svoju lásku</h1>
+	<span id="countdown-holder"></span>
+	<script type="text/javascript">
+		var clock = document.getElementById("countdown-holder"), 
+			targetDate = new Date(2015, 08, 20); // Sep 20, 2015;
+		 
+		clock.innerHTML = countdown(targetDate).toString();
+		  	setInterval(function(){
+		    	clock.innerHTML = countdown(targetDate, null, countdown.ALL).toString();
+		  	}, 1);
+	</script>
+</body>
+</html>
